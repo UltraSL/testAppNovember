@@ -1,0 +1,208 @@
+/* google fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  
+}
+
+ul {
+  list-style-type: none;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 20px 10px;
+  width: 60%;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 0px 20px rgba(227, 228, 237, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.logo i {
+  font-size: 30px;
+  color: #ff0000;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-list {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-list:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Darkens the background on hover */
+  transform: scale(1.05); /* Slightly enlarges the list area */
+  border-radius: 5px; /* Keeps the corners rounded */
+}
+
+.menu-link {
+  font-weight: 600;
+  color: #4a4242;
+  font-size: 16px;
+  padding: 10px 15px; /* Adds padding around the link */
+  display: block;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.menu-link:hover {
+  color: rgba(223, 160, 6, 0.9); /* Changes text color on hover */
+}
+
+.logo {
+  flex: 0.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .logo i {
+    font-size: 25px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu-list {
+    margin-left: 5px;
+  }
+
+  .menu-link {
+    font-size: 14px;
+  }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .layer-wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    perspective: 1000px; /* Enables 3D transformations */
+  }
+  
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+  }
+  
+  /* Background Layer */
+  .background {
+    background: linear-gradient(to bottom, #6a11cb, #2575fc);
+    z-index: 1;
+    transform: translateZ(-300px) scale(0.8);
+    animation: backgroundAnimation 5s infinite alternate;
+  }
+  
+  /* Middle Layer */
+  .middle {
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+    transform: translateZ(-100px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: middleAnimation 3s infinite alternate;
+  }
+  
+  /* Foreground Layer */
+  .foreground {
+    background: #ffffff;
+    z-index: 3;
+    transform: translateZ(0);
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    animation: foregroundAnimation 4s infinite alternate;
+  }
+  
+  /* Animations */
+  @keyframes backgroundAnimation {
+    0% { transform: translateZ(-300px) scale(0.8); }
+    100% { transform: translateZ(-250px) scale(0.85); }
+  }
+  
+  @keyframes middleAnimation {
+    0% { transform: translateZ(-100px) translateY(-10px); }
+    100% { transform: translateZ(-100px) translateY(10px); }
+  }
+  
+  @keyframes foregroundAnimation {
+    0% { transform: translateZ(0) scale(1); }
+    100% { transform: translateZ(0) scale(1.05); }
+  }
+  
+  /* Button Styles */
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.1);
+  }
+  

@@ -1,0 +1,27 @@
+<div class="container mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-4">Tutes List</h2>
+    
+    <div class="overflow-x-auto shadow-lg rounded-lg bg-white">
+      <table class="min-w-full bg-white table-auto">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase">Tute Name</th>
+            <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase">Year</th>
+            <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase">Link</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr *ngFor="let doc of documents">
+            <td class="px-6 py-4 text-sm font-medium text-gray-900">{{ doc.name }}</td>
+            <td class="px-6 py-4 text-sm font-medium text-gray-700">{{ doc.year }}</td>
+            <td class="px-6 py-4 text-sm">
+              <a href="{{ doc.link }}" target="_blank" class="text-blue-500 hover:text-blue-700 underline">
+                View Document
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

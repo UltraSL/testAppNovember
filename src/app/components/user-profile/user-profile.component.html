@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- divinectorweb.com -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive User Profile Card using HTML and CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./user-profile.component.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="user-card">
+            <div class="user-card-img">
+              <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </div>
+            <div class="user-card-info">
+              <h2>Praveen Maduwantha</h2>
+              <p><span>Phone No.:</span> 075-89656984</p>
+              <p><span>Email:</span> example&#64;gmail.com </p>
+              <p><span>A/L Year:</span> 2024 A/L</p>
+              <p><span>Home Address:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>
+      
+</body>
+</html>
+
+
+<p>user-profile works!</p>
+
+<input type="text" placeholder="Type Something Here" [(ngModel)]="text" value="text" />
+<p>The Text : {{text}} </p><button (click)="addButton(text)">Add Text</button>
+
+<p>List of Items</p>
+
+<ul>
+    <li *ngFor="let item of listData">{{item}}</li>
+</ul>

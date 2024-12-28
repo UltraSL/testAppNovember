@@ -1,0 +1,40 @@
+/* Table Styles */
+table {
+    width: 50%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    align-items: center;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  th {
+    background-color: #0099ff;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f5f9;
+  }
+  
+  /* Links */
+  a {
+    text-decoration: none;
+    color: #1d4ed8; /* Tailwind Blue */
+  }
+  
+  a:hover {
+    color: #1e40af; /* Darker Blue on hover */
+    text-decoration: underline;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    th, td {
+      padding: 10px;
+    }
+  }
+  

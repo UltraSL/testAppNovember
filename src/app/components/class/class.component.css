@@ -1,0 +1,135 @@
+.image-container {
+    flex: 1; /* Takes up 1/3 of the space */
+    display: flex;
+    justify-content: flex-start; /* Add space between rows */
+    align-items: center;
+    position: relative;
+    list-style: none;
+    flex-wrap: wrap; /* Allows wrapping to the next line */
+    gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .image-container li {
+    flex: 1 1 calc(33.33% - 15px); /* Each item takes 1/3 of the row minus the gap */
+    max-width: calc(33.33% - 15px); /* Ensure it doesn't exceed 1/3 of the row */
+    list-style-type: none; /* Remove bullet points */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .portrait-image {
+    width: 80%; /* Adjust image width */
+    max-width: 400px; /* Maximum width for larger screens */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    border: 5px solid #fff; /* White border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+    max-width: 600px; /* Restrict the width for better layout */
+  }
+  
+  .portrait-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+  }
+
+  .portrait-image p {
+    font-size: 15px;
+    color: #333;
+    margin: 2px;
+    align-items: flex-start;
+  }
+
+  .portrait-image h4 {
+    color: #262525;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    align-items: flex-start;
+  }
+
+  .portrait-image ul li {
+    color: #2f00be;
+    margin: 10px;
+    display: inline;
+  }
+  .portrait-image img {
+    flex : 0.5;
+    width: 80px;
+    height: 80px;
+  }
+
+  .sub-portrait {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically align the image and text */
+    gap: 10px; /* Space between the text and image */
+    margin-bottom: -20px;
+}
+
+.sub-portrait h4 {
+    flex: 1; /* Allow the text to take up available space */
+    font-size: 1.2em;
+    padding: 10px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sub-portrait img {
+    max-width: 150px; /* Set max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+    border-radius: 25%;
+}
+.portrait-image p {
+    font-size: 18px;
+    color: #535252;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.details {
+  background: rgba(223, 160, 6, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.details li {
+    background-color: #f2e3e3;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #444;
+}
+
+.more-details {
+    background-color: #2f00be;
+}
+
+.more-details p{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #f8f4f4;
+}
+.more-details h4{
+    margin-top: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    color: #e4e4e4;
+    padding-left: 10px;
+}
+
+.more-details a p:hover {
+    color: #ff1616;
+}
+
+@media (max-width: 768px) {
+  .image-container li {
+    flex: 1 1 calc(50% - 20px); /* Show 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container li {
+    flex: 1 1 100%; /* Show 1 item per row on small screens */
+  }
+}
