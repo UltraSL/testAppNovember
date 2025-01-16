@@ -17,11 +17,12 @@
               <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
             </div>
             <div class="user-card-info">
-              <h2>Praveen Maduwantha</h2>
-              <p><span>Phone No.:</span> 075-89656984</p>
-              <p><span>Email:</span> example&#64;gmail.com </p>
-              <p><span>A/L Year:</span> 2024 A/L</p>
-              <p><span>Home Address:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h2>Welcome {{userData.name}}</h2>
+              <p><span>Phone No.:</span> {{userData.phoneNumber}}</p>
+              <p><span>Email:</span> {{userData.email}} </p>
+              <p><span>A/L Year:</span> {{userData.alYear}}</p>
+              <p><span>Home Address:</span> {{userData.address}}</p>
+              <button class="btn btn-outline-danger" (click)="userLogout()">Logout</button>
             </div>
         </div>
     </div>

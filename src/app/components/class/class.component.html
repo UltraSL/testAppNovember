@@ -1,115 +1,19 @@
 <ul class="image-container">
-    <li>
+    <li *ngFor="let d of details">
         <div routerLink="/">
             <div class="portrait-image">
                 <div class="sub-portrait">
-                    <h4>2025 THEORY | Combined Mathematics</h4>
+                    <h4>{{d.className}} | {{d.subject}}</h4>
                     <img src="../../../assets/KGP09455.jpg" alt="Portrait Image">
                 </div>
-                <p>SACHITH MADURANGA</p>
+                <p>{{d.teacherName}}</p>
                 <ul class="details">
-                    <li>Physical</li>
-                    <li>Bandarawela</li>
+                    <li>{{d.conductType}}</li>
+                    <li>{{d.location}}</li>
                 </ul>
                 <div class="more-details">
-                    <p>Sunday: 08:30am - 12.30pm </p>
-                    <h4>Rs. 3000.00 Per Month</h4>
-                    <hr style="border: 0.5px solid #b4b0b0; width: 100%; margin: 10px auto;">
-                    <a href="/">
-                        <p>Learn More...</p>
-                    </a>
-                </div>
-            </div>
-            
-        </div>
-    </li>
-    <li>
-        <div routerLink="/">
-            <div class="portrait-image">
-                <div class="sub-portrait">
-                    <h4>2025 REVISION | Combined Mathematics</h4>
-                    <img src="../../../assets/KGP09455.jpg" alt="Portrait Image">
-                </div>
-                <p>SACHITH MADURANGA</p>
-                <ul class="details">
-                    <li>Physical</li>
-                    <li>Bandarawela</li>
-                </ul>
-                <div class="more-details">
-                    <p>Thursday: 08:00am - 2.30pm </p>
-                    <h4>Rs. 3200.00 Per Month</h4>
-                    <hr style="border: 0.5px solid #b4b0b0; width: 100%; margin: 10px auto;">
-                    <a href="/">
-                        <p>Learn More...</p>
-                    </a>
-                </div>
-            </div>
-            
-        </div>
-    </li>
-    <li>
-        <div routerLink="/">
-            <div class="portrait-image">
-                <div class="sub-portrait">
-                    <h4>2025 PAPER | Combined Mathematics</h4>
-                    <img src="../../../assets/KGP09455.jpg" alt="Portrait Image">
-                </div>
-                <p>SACHITH MADURANGA</p>
-                <ul class="details">
-                    <li>Physical</li>
-                    <li>Bandarawela</li>
-                </ul>
-                <div class="more-details">
-                    <p>Monday: 08:00am - 2.00pm </p>
-                    <h4>Rs. 2000.00 Per Month</h4>
-                    <hr style="border: 0.5px solid #b4b0b0; width: 100%; margin: 10px auto;">
-                    <a href="/">
-                        <p>Learn More...</p>
-                    </a>
-                </div>
-            </div>
-            
-        </div>
-    </li>
-    <li>
-        <div routerLink="/">
-            <div class="portrait-image">
-                <div class="sub-portrait">
-                    <h4>2026 THEORY | Combined Mathematics</h4>
-                    <img src="../../../assets/KGP09455.jpg" alt="Portrait Image">
-                </div>
-                <p>SACHITH MADURANGA</p>
-                <ul class="details">
-                    <li>Physical</li>
-                    <li>Bandarawela</li>
-                </ul>
-                <div class="more-details">
-                    <p>Sunday: 01:00pm - 5.00pm </p>
-                    <h4>Rs. 3200.00 Per Month</h4>
-                    <hr style="border: 0.5px solid #b4b0b0; width: 100%; margin: 10px auto;">
-                    <a href="/">
-                        <p>Learn More...</p>
-                    </a>
-                </div>
-            </div>
-            
-        </div>
-    </li>
-    <li>
-        <div routerLink="/">
-            <div class="portrait-image">
-                <div class="sub-portrait">
-                    <h4>2026 PAPER | Combined Mathematics</h4>
-                    <img src="../../../assets/KGP09455.jpg" alt="Portrait Image">
-                </div>
-                <p>SACHITH MADURANGA</p>
-                <ul class="details">
-                    <li>Physical</li>
-                    <li>Bandarawela</li>
-                </ul>
-                <div class="more-details">
-                    <p>Monday: 02:30pm - 5.30pm </p>
-                    <h4>Rs. 2000.00 Per Month</h4>
+                    <p>{{d.date}}: {{d.time}} </p>
+                    <h4>Rs. {{d.feez}} Per Month</h4>
                     <hr style="border: 0.5px solid #b4b0b0; width: 100%; margin: 10px auto;">
                     <a href="/">
                         <p>Learn More...</p>

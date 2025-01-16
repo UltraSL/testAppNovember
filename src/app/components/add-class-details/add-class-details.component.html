@@ -1,0 +1,91 @@
+<div class="container my-5 p-4 bg-light rounded shadow">
+    <form>
+      <h2 class="text-center mb-4 text-primary">Class Information</h2>
+      <div class="mb-3">
+        <label for="className" class="form-label fw-bold">Class Name</label>
+        <input
+          type="text"
+          class="form-control form-control-lg"
+          id="className"
+          placeholder="2025 | THEORY" 
+          [(ngModel)]="classDetails.className"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="subject" class="form-label fw-bold">Subject</label>
+        <input
+          type="text"
+          class="form-control form-control-lg"
+          id="subject"
+          placeholder="COMBINED MATHS"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="teacherName" class="form-label fw-bold">Teacher Name</label>
+        <input
+          type="text"
+          class="form-control form-control-lg"
+          id="teacherName"
+          placeholder="SACHITH MADURANGA"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="conductType" class="form-label fw-bold">Conduct Type</label>
+        <select class="form-select form-select-lg" id="conductType">
+          <option>Physical</option>
+          <option>Online</option>
+          <option>Hybrid</option>
+        </select>
+      </div>
+  
+      <div class="mb-3">
+        <label for="location" class="form-label fw-bold">Location</label>
+        <input
+          type="text"
+          class="form-control form-control-lg"
+          id="location"
+          placeholder="Location"
+        />
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="date" class="form-label fw-bold">Date</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="date"
+            placeholder="Sunday"
+          />
+        </div>
+  
+        <div class="col-md-3 mb-3">
+          <label for="startTime" class="form-label fw-bold">Start Time</label>
+          <input type="time" class="form-control form-control-lg" id="startTime" />
+        </div>
+  
+        <div class="col-md-3 mb-3">
+          <label for="endTime" class="form-label fw-bold">End Time</label>
+          <input type="time" class="form-control form-control-lg" id="endTime" />
+        </div>
+      </div>
+  
+      <div class="mb-4">
+        <label for="fee" class="form-label fw-bold">Fee</label>
+        <input
+          type="number"
+          class="form-control form-control-lg"
+          id="fee"
+          placeholder="3000.00"
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-primary btn-lg w-100">
+        Submit Class Details
+      </button>
+    </form>
+  </div>
+  

@@ -19,12 +19,16 @@
      <li class="menu-list">
     <a routerLink="/tute" class="menu-link">Tute Packs</a>
     </li>
-     <li class="menu-list">
+     <li class="menu-list" *ngIf="isLoggedIn()">
     <a routerLink="/user" class="menu-link">Profile</a>
     </li>
+    <li class="menu-list" *ngIf="!isLoggedIn()">
+      <a routerLink="/login" class="menu-link">Login</a>
+    </li> 
   </ul>
-
+  
   </section>
+  
 </nav>
 
 
@@ -57,7 +61,7 @@
 </div>
 
 <div class="row2">
-Sachith Maduranga © 2025 Combined Maths - All rights reserved || Designed By: Sachith Maduranga 
+Sachith Maduranga © 2025 Combined Maths - All rights reserved | Designed By: Sachith Maduranga 
 </div>
 </div>
 </footer>

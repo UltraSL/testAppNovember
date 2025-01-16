@@ -2,6 +2,7 @@ import { Component, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UserProfileService } from '../../Services/user-profile.service';
 import { NgFor } from '@angular/common';
+import { AuthServiceService } from '../../Services/auth-service.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -12,10 +13,12 @@ import { NgFor } from '@angular/common';
 })
 export class UserProfileComponent implements OnInit {
 
-  constructor(private userService: UserProfileService) {}
+  constructor(private userService: UserProfileService, private auth : AuthServiceService) {}
 
   text : string = '';
-  listData : string[]  = []
+  listData : any  = {}
+  userData : any = {}
+  userName : any = {}
 
   addButton(text : string){
     this.userService.addData(this.text);
@@ -23,10 +26,13 @@ export class UserProfileComponent implements OnInit {
     console.log(this.listData);
   }
 
-  ngOnInit() {
-    this.listData = this.userService.getData();
-    console.log(this.listData);
+  userLogout(){
+    this.auth.logout()
   }
+
+  ngOnInit() {
+    this.userData = this.auth.getDecodedToken();
+  } 
   
 
   
